@@ -1,0 +1,6 @@
+import {auth,functions} from './firebase-client.mjs';
+import {httpsCallable} from 'https://www.gstatic.com/firebasejs/12.0.0/firebase-functions.js';
+const host=document.createElement('section');host.className='legal-shell';
+host.innerHTML='<h2>Deinen Profilnamen entfernen</h2><p>Dein Kundenkonto und deine Abos bleiben bestehen. Entfernt wird der Anzeigename in Anmeldung und Kundenprofilen; Namen in Rechnungen, Nachweisen oder weiteren Datensätzen bleiben davon getrennt.</p><label><input type="checkbox" id="eraseNameConfirm"> Ich möchte meinen Profilnamen entfernen lassen.</label><button type="button">Namenslöschung beauftragen</button><p role="status"></p>';
+document.getElementById('customerHome')?.append(host);
+host.querySelector('button').onclick=async()=>{const status=host.querySelector('[role=status]'),button=host.querySelector('button');if(!auth.currentUser||!host.querySelector('input').checked){status.textContent='Bitte anmelden und die Namenslöschung bestätigen.';return}button.disabled=true;try{await httpsCallable(functions,'requestProfileNameErasure')({confirmed:true});status.textContent='Beauftragt. Der tägliche Serverlauf entfernt deinen Profilnamen bei störungsfreiem Betrieb innerhalb von 24 Stunden.';}catch{status.textContent='Nicht beauftragt. Bitte später erneut versuchen oder den Datenschutzkontakt nutzen.';button.disabled=false;}};

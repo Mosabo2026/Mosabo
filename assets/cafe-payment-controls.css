@@ -1,0 +1,6 @@
+#tarife-cafe #coffeePaymentControls{display:grid;gap:18px;margin-top:22px}
+#tarife-cafe #coffeePaymentControls>a{color:#e6ca91;font-size:13px;text-decoration:underline;text-underline-offset:5px;background:transparent}
+#tarife-cafe #coffeePaymentControls label{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.75;color:#d6ddc9}
+#tarife-cafe #coffeePaymentControls label input{width:20px;height:20px;margin:2px 0 0;flex-shrink:0;accent-color:#dfbd7b}
+#tarife-cafe #coffeePaymentControls>button{background:#dfc18a;color:#172012;border:1px solid #dfbd7b;border-radius:9px;padding:15px 20px;font-size:14px;font-weight:700;min-height:48px}
+#tarife-cafe #coffeePaymentControls>button:disabled{opacity:.5;cursor:not-allowed}

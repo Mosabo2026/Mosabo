@@ -29,7 +29,7 @@ window.moStripeCheckout=async data=>{
  const available=await getPaymentState(true),kind=data.catalogOfferId?'catalog':data.category;
  if(!canPurchase(available,kind))throw Error('Zahlungen werden für diesen Bereich noch vorbereitet.');
  const chosenCoffeeCompany=data.companyId||coffeeCompany;
- if(data.category==='coffee'&&!data.catalogOfferId&&!/^[A-Za-z0-9_-]{1,100}$/.test(chosenCoffeeCompany||''))throw Error('Bitte zuerst deinen Café-Partner auswählen.');
+ if(data.category==='coffee'&&!data.catalogOfferId&&data.redemptionScope!=='food-network'&&!/^[A-Za-z0-9_-]{1,100}$/.test(chosenCoffeeCompany||''))throw Error('Bitte zuerst deinen Café-Partner auswählen.');
  working=true;refreshControls();say(available.mode==='test'?'Stripe-Testzahlung wird geöffnet …':'Sicherer Stripe-Checkout wird geöffnet …');
  try{const result=(await httpsCallable(functions,'createStripeCheckout')({...data,...(data.category==='coffee'&&!data.catalogOfferId?{companyId:chosenCoffeeCompany}:{}),termsAccepted:true})).data;if(auth.currentUser?.uid!==user.uid)throw Error('Bitte erneut anmelden.');const url=new URL(result.url);if(url.origin!=='https://checkout.stripe.com'||url.username||url.password)throw Error('Ungültige Zahlungsadresse.');location.assign(url.href);}catch(e){say(failure(e));throw e;}finally{working=false;refreshControls();}
 };

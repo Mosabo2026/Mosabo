@@ -23,6 +23,10 @@ export function visibleWorlds(records){
   const partners=visiblePartners(records);
   return WORLDS.map(w=>({...w,partners:partners.filter(p=>p.world.id===w.id)})).filter(w=>w.partners.length);
 }
+export function catalogWorlds(records){
+  const partners=visiblePartners(records);
+  return WORLDS.map(w=>({...w,partners:partners.filter(p=>p.world.id===w.id)}));
+}
 export function publicProjection({company,category,branch,active,branding,previous,uid,stamp}){
   if(!active&&!previous)return null;
   const position=placement({category,branch});

@@ -1,0 +1,16 @@
+#tarife-cafe{--cafe-package-image:none}
+#tarife-cafe .cafe-plan-photo{display:block;width:100%;aspect-ratio:1.85;background-image:var(--cafe-package-image);background-repeat:no-repeat;background-size:307.2% auto;background-position:.965% 11.27%;border:1px solid #dfbd7b44;border-radius:15px;margin:21px 0 25px;box-shadow:0 12px 35px #0003;overflow:hidden}
+#tarife-cafe .cafe-photo-standard{background-position:50.193% 11.27%}
+#tarife-cafe .cafe-photo-premium{background-position:99.22% 11.27%}
+#tarife-cafe .cafe-photo-mittag{background-size:204.8% auto;background-position:1.27% 87.07%}
+#tarife-cafe .cafe-photo-cowork{background-size:204.8% auto;background-position:98.47% 87.07%}
+#tarife-cafe .select-plan>div:first-child{min-width:0;width:100%}
+#tarife-cafe .offer-highlight .cafe-plan-photo{max-width:100%;aspect-ratio:1.85}
+#tarife-cafe .cafe-image-note{font-size:11px;color:#c1c5b7;line-height:1.7;margin:10px 0 0}
+@media(max-width:600px){#tarife-cafe .cafe-plan-photo{margin:19px 0 23px;border-radius:12px}#tarife-cafe .select-plan{min-width:0}}
+#tarife-cafe .cafe-plan-photo{position:relative;background:none}
+#tarife-cafe .cafe-plan-photo>img{display:block!important;position:absolute!important;max-width:none!important;width:307.2%!important;height:auto!important;left:-2%;top:-31.45%;margin:0!important;border:0!important;border-radius:0!important;object-fit:fill!important}
+#tarife-cafe .cafe-photo-standard>img{left:-104%}
+#tarife-cafe .cafe-photo-premium>img{left:-205.6%}
+#tarife-cafe .cafe-photo-mittag>img{width:204.8%!important;left:-1.3333%;top:-132.95%}
+#tarife-cafe .cafe-photo-cowork>img{width:204.8%!important;left:-103.2%;top:-132.95%}
