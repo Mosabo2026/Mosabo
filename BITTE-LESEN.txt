@@ -1,0 +1,33 @@
+Mo‘s Abo – vollständiges Webseitenpaket, 27.10.2026
+
+START.html: Auswahl der Ansichten.
+vorschau-mobil.html: direkt sichtbare mobile Designvorschau ohne JavaScript.
+vorschau.html: bestehende interaktive gemeinsame Vorschau; im Browser öffnen.
+index.html: vollständige Hauptseite, mit korrigiertem MGS-Direktlink.
+mgs.html: MGS unter Dienstleistungen mit den bestehenden drei Tarifen.
+
+Installation auf GitHub Pages:
+ZIP vollständig entpacken. Alle Dateien und den gesamten Ordner assets in das
+bestehende Webseitenverzeichnis hochladen und gleichnamige Dateien ersetzen.
+Die Ordnerstruktur erhalten. Keine zusätzliche ZIP-Ordnerstufe als Startseite.
+Vor dem Ersetzen den bisherigen Stand sichern.
+
+Korrekturen:
+- MGS-Direktlink bleibt beim dynamischen Aufbau der Hauptseite sichtbar.
+- MGS wird auch in der dynamischen Dienstleistungs-Kategorie des Kundenbereichs genannt.
+- Mobile Designvorschau zeigt Inhalte und Bilder ohne JavaScript.
+- Bestehende Bilder unverändert übernommen.
+
+Funktionsstand:
+Dies ist ein Webseitenpaket, keine Produktionsfreigabe. Separate Backend-Quellen
+sind nicht enthalten. MGS-Serverspeicherung, OCR, Buchungsstapel und MGS-Zahlungen
+sind nicht angebunden. Vorschau-Anmeldung und Auswahl lösen keine Buchung aus.
+Belege in der lokalen Vorschau bleiben nur in der Sitzung. Keine echten oder
+vertraulichen Belege verwenden. Bestehende Backend-Abhängigkeiten von Café,
+Autowäsche, Anmeldung, QR-Einlösung und Kündigung werden durch diese ZIP nicht
+eingerichtet. Ein vollständiger Browser-/Kundenablauftest steht aus.
+
+Geprüft: ZIP-Integrität, lokale HTML-Dateiverweise, statische Modulimporte,
+JavaScript-Syntax (128 Prüfungen im Ausgangspaket und Nachprüfung der Änderungen).
+Rechtstexte und Tarife wurden bei diesem Update inhaltlich nicht geändert.
+Kontakt: info@mosabo.de
