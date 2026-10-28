@@ -47,7 +47,7 @@ onAuthStateChanged(auth,async user=>{
   if(selectedBranch){
    $('offerTitle').textContent=selectedBranch+' · Deine Abos';$('partnerArea').textContent='Tarif auswählen und anschließend bezahlen';
    const back=el('a','← Zur Übersicht');back.href='partner-angebote.html?bereich='+encodeURIComponent(browseWorld.id);$('partnerArea').append(el('br'),back);
-   const isCafeBranch=selectedBranch==='Cafés';
+   const isCafeBranch=['Cafés','Restaurants','Bäckereien','Bars'].includes(selectedBranch);
    const isWashBranch=selectedBranch==='Autowäsche';let washOffers=[],washPartners=[],stopWash=()=>{};
    if(isCafeBranch)coffeeCards();
    if(isWashBranch){const host=el('div');host.className='wash-catalog';host.style.gridColumn='1 / -1';list.append(host);washController=mountWashTariffs(host,{onCheckout:data=>window.moStripeCheckout(data),canPay:canPurchase(payment,'carwash')});

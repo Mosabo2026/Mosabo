@@ -14,7 +14,7 @@ function render(){
  for(const world of worlds){
   const card=el('a',undefined,'member-category-card member-category-link');card.href='partner-angebote.html?bereich='+encodeURIComponent(world.id);card.dataset.world=world.id;
   const photo=el('img');photo.src=photos.get(world.id)||'assets/mo-navigation/images/photos-'+world.id+'.jpg';photo.alt=world.name;photo.className='category-cover';photo.loading='lazy';
-  const copy=el('div',undefined,'category-copy');copy.append(el('h3',world.name),el('p',lines[world.id]),el('small',world.branches.join(' · ')),el('span','Partner & Abos ansehen →','category-open'));card.append(photo,copy);grid.append(card);
+  const copy=el('div',undefined,'category-copy');copy.append(el('h3',world.name),el('p',lines[world.id]),el('small',(world.id==='services'?'MGS Belegverwaltung · ':'')+world.branches.join(' · ')),el('span','Partner & Abos ansehen →','category-open'));card.append(photo,copy);grid.append(card);
  }
 }
 function sync(){
